@@ -25,4 +25,5 @@ def truncatableprime_controller(inputNumber):
    except :
        return {"Status": "OK", "Result": "Please enter Valid Input"  }
 
-
+if __name__ == "__main__":
+    app.run()
