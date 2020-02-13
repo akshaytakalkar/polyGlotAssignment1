@@ -1,0 +1,7 @@
+version: '3.5'
+services:
+    k8s-python:
+        ports:
+          - '1377:80' 
+        container_name: python-application
+        image: 'akshayttt/k8s-python:16'
