@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "deploy.fullname" . }}
+  name: {{ include "k8s-python.fullname" . }}
   labels:
-{{ include "deploy.labels" . | indent 4 }}
+    {{- include "k8s-python.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -12,5 +12,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app.kubernetes.io/name: {{ include "deploy.name" . }}
-    app.kubernetes.io/instance: {{ .Release.Name }}
+    {{- include "k8s-python.selectorLabels" . | nindent 4 }}
