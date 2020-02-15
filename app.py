@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Hello,Folks the application is deployed in k8s cluster"
+    return "Hello,Folks the is meetup demo on 15th Feb"
 
 @app.route("/api/v1/truncatableprime/<inputNumber>")
 def truncatableprime_controller(inputNumber):
